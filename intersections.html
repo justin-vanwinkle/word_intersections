@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Word Intersections</title>
+    </head>
+
+    <body>
+        <table id="table" >
+        </table>
+    </body>
+
+    <script>
+        var entities = ['image', 'photo', 'text', 'source', 'site', 'traffic', 'money', 'book', 'e-book', 'file', 'smartphone', 'camera', 'notebook', 'cities', 'distances', 'cars', 'mobile', 'book', 'sex', 'love', 'classifieds', 'ads', 'alcohol', 'travel'];
+        var verbs = ['sell', 'buy', 'rent', 'exchange', 'free', 'give', 'book', 'clean', 'find', 'classify', 'compare'];
+        for(var i=0; i<entities.length; i++){
+            var tr = document.createElement("tr");
+            for(var j=0; j<verbs.length; j++){
+                var td = document.createElement("td");
+                var text = document.createTextNode(verbs[j] + " " + entities[i]);
+                td.appendChild(text);
+                tr.appendChild(td);
+            }
+            var table = document.getElementById("table");
+            table.appendChild(tr);
+        }
+    </script>
+
+    <style>
+        body {
+            margin: auto;
+            display: inline-block;
+        }
+        td {
+            padding: 5px;
+            text-align: center;
+            white-space: nowrap;
+        }
+    </style>
+
+</html>
